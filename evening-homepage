@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>Wedding Details</title>
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #5F8575;
+      color: #ffffff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #F0FFFF;
+      text-align: center;
+    }
+    .wedding-details {
+      margin-top: 30px;
+      text-align: center;
+      text-align: center;
+    }
+    .wedding-date {
+      font-size: 24px;
+      color: #F0FFFF;
+    }
+    .venue {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .countdown {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 30px;
+      color: #F0FFFF;
+    }
+    .navigation {
+      text-align: center;
+      font-size: 30px;
+      color: #000000;
+    }
+    .schedule {
+      text-align: center;
+      color: #F0FFFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Wedding of Ryan & Indigo</h1>
+    <div class="wedding-details">
+      <p class="wedding-date">Friday 6 September 2024</p>
+      <p class="venue">Ravenwood Hall Hotel</p>
+    </div>
+    <div class="countdown">
+      <p>Wedding Countdown | <span id="countdown"></span></p>
+    </div>
+  </div>
+
+  <script>
+    // Countdown Timer JavaScript code
+    // Set the wedding date and time
+    var weddingDate = new Date('September 06, 2024 14:00:00').getTime();
+
+    // Update the countdown every 1 second
+    var countdown = setInterval(function() {
+      // Get the current date and time
+      var now = new Date().getTime();
+
+      // Find the time remaining between now and the wedding date
+      var timeRemaining = weddingDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Display the countdown in the HTML element with id "countdown"
+      document.getElementById('countdown').innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+
+      // If the countdown is over, display a message
+      if (timeRemaining < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = 'The wedding has already started!';
+      }
+    }, 1000);
+  </script>
+   <div class="navigation">
+      <a href="password.html">RSVP</a>
+    </div>
+  <div class="schedule">
+      <h2>Wedding Schedule</h2>
+      <ul>19:00 Evening begins</ul>
+      <ul>00:00 Hometime bitches</ul>
+    </div>
+</body>
+</html>
