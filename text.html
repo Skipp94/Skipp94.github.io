@@ -1,104 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Skipp Wedding 24</title>
-  <style>
-    /* Add your custom CSS styles here */
-    @import url('fonts/Munchie.woff2');
+     <link rel="stylesheet" href="stylesheet.css">
+     <title>Skipp Wedding 24</title>
+  </head>
+
+  <body>
+    <div id="header">
+     <div class="headersection">
+        <div class="headertext">
     
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: url('http://i.imgur.com/RT3Kzch.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    h1 {
-      color: black;
-      font-family: 'Munchie', sans-serif;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .modal {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
-    .password-input {
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-family: 'Dancing Script', cursive;
-      background-color: white;
-    }
-    .submit-button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      font-family: 'Dancing Script', cursive;
-      background-color: #5F8575;
-    }
-    .enter-site-link {
-      display: inline-block;
-      font-family: 'Dancing Script', cursive;
-      padding: 10px 20px;
-      font-size: 36px;
-      border-radius: 5px;
-      background-color: #5F8575;
-      color: black;
-      border: none;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .enter-site-link:hover {
-      background-color: green;
-  </style>
-  <script>
-    function showPasswordModal() {
-      var modal = document.getElementById('password-modal');
-      modal.style.display = 'block';
-    }
+    <h1 class="namesheader">
+        Indigo
+        <span>&</span>
+        Ryan
+    </h1>
+    <h2>Invite you to join them</h2>
+    <h3>06/09/2024</h3>
+   
+    <h4> <span id="countdown"></span></h4>
     
-    function checkPassword() {
-      var passwordInput = document.getElementById('password-input');
-      var password = passwordInput.value;
-      
-      // Check if the entered password is correct
-      if (password === 'Day') {
-        // Redirect to Page 1
-        window.location.href = 'home-page.html';
-      } else if (password === 'Evening') {
-        // Redirect to Page 2
-        window.location.href = 'page2.html';
-      } else {
-        alert('Invalid password. Please try again.'); // Show an error message
-      }
-    }
-  </script>
-</head>
-<body>
-  <h1>Skipp Wedding 2024</h1>
-  <a class="enter-site-link" onclick="showPasswordModal()">Enter Site</a>
-  
-  <!-- Password Modal -->
-  <div id="password-modal" class="modal" style="display: none;">
-    <input id="password-input" class="password-input" type="password" placeholder="Password" required>
-    <button onclick="checkPassword()" class="submit-button">Submit</button>
+    <a class="rsvp" href="https://docs.google.com/forms/d/e/1FAIpQLSfBvQ_FFSlH15Ml3ONmpLxiSTRlwCPYUJMm_7NaixVU-F9CFg/viewform?usp=sf_link">RSVP</a>
   </div>
+  </div>
+
+  <div class="slideshow-container">
+    <ul class="slides">
+      <li><img src="http://i.imgur.com/RT3Kzch.jpg" alt="Image 1"></li>
+    </ul>
+  </div>
+
+  <div id="schedulecontent">
+    <div id="schedule">
+      <div class="scheduleheader">Schedule</div>
+      <div class="ceremony">
+         <div class="ceremonytime">2:00pm</div>
+         <div class="ceremonydetail">
+          <div class="ceremonytext">Ceremony</div>
+          <div>
+            <div class="ceremonylocation">
+              <div>Ravenwood Hall Hotel</div>
+              <div>Rougham, Blackthorpe, Bury St Edmunds, IP30 9JA</div>
+            </div>
+            <div class="directions">
+              <a class="getdirections" href="https://www.google.com/maps/place/Ravenwood+Hall/@52.2367538,0.7804893,17z/data=!4m20!1m10!3m9!1s0x47d84cc2b24966bd:0x6d2d8160426d5487!2sRavenwood+Hall!5m2!4m1!1i2!8m2!3d52.2367538!4d0.7830642!16s%2Fg%2F1thxk9zy!3m8!1s0x47d84cc2b24966bd:0x6d2d8160426d5487!5m2!4m1!1i2!8m2!3d52.2367538!4d0.7830642!16s%2Fg%2F1thxk9zy?entry=ttu" target="blank">Get Directions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Countdown Timer JavaScript -->
+  <script>
+    var weddingDate = new Date('September 06, 2024 14:00:00').getTime();
+
+    var countdown = setInterval(function() {
+      var now = new Date().getTime();
+      var timeRemaining = weddingDate - now;
+      var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+
+      if (timeRemaining < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = 'The wedding has already started!';
+      }
+    }, 1000);
+  </script>
+
+  <!-- Slideshow JavaScript -->
+  <script>
+    let slideIndex = 0;
+
+    function showSlides() {
+      const slides = document.querySelectorAll('.slides li');
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+
+      slides[slideIndex - 1].style.display = 'block';
+
+      setTimeout(showSlides, 3000);
+    }
+
+    window.onload = showSlides;
+  </script>
+
 </body>
 </html>
