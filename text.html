@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skipp Wedding 24</title>
+  <style>
+    /* Add your custom CSS styles here */
+    @import url('fonts/Munchie.woff2');
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('http://i.imgur.com/RT3Kzch.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      color: black;
+      font-family: 'Munchie', sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .password-input {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: 'Dancing Script', cursive;
+      background-color: white;
+    }
+    .submit-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      font-family: 'Dancing Script', cursive;
+      background-color: #5F8575;
+    }
+    .enter-site-link {
+      display: inline-block;
+      font-family: 'Dancing Script', cursive;
+      padding: 10px 20px;
+      font-size: 36px;
+      border-radius: 5px;
+      background-color: #5F8575;
+      color: black;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .enter-site-link:hover {
+      background-color: green;
+  </style>
+  <script>
+    function showPasswordModal() {
+      var modal = document.getElementById('password-modal');
+      modal.style.display = 'block';
+    }
+    
+    function checkPassword() {
+      var passwordInput = document.getElementById('password-input');
+      var password = passwordInput.value;
+      
+      // Check if the entered password is correct
+      if (password === 'Day') {
+        // Redirect to Page 1
+        window.location.href = 'home-page.html';
+      } else if (password === 'Evening') {
+        // Redirect to Page 2
+        window.location.href = 'page2.html';
+      } else {
+        alert('Invalid password. Please try again.'); // Show an error message
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Skipp Wedding 2024</h1>
+  <a class="enter-site-link" onclick="showPasswordModal()">Enter Site</a>
+  
+  <!-- Password Modal -->
+  <div id="password-modal" class="modal" style="display: none;">
+    <input id="password-input" class="password-input" type="password" placeholder="Password" required>
+    <button onclick="checkPassword()" class="submit-button">Submit</button>
+  </div>
+</body>
+</html>
