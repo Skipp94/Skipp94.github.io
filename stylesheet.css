@@ -43,7 +43,11 @@ body {
     background-color: rgb(95, 133, 117);
   }
 
-
+.engagementphoto{
+    max-width: 50%;
+    max-height: 50%
+  }
+  
 
 
   
