@@ -1,6 +1,11 @@
 h1,h2,h3,h4 {
   font-family: 'Munchie', sans-serif;
   color: rgb(95, 133, 117);
+  text-decoration: underline;
+}
+
+.namesheader{
+  text-decoration: none;
 }
 
 body {
@@ -36,6 +41,11 @@ body {
   .rsvp:hover{
     cursor: pointer;
     background-color: rgb(95, 133, 117);
+  }
+
+  img{
+    max-width: 50%;
+    height: auto;
   }
 
 
