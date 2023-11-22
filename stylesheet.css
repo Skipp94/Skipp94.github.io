@@ -20,7 +20,9 @@ body {
     background-image: url("https://sayido.b-cdn.net/2gNtB3djFTh4JJ5aoFOS41khvKQ2/images/f2f3e201-8fd8-5fa7-dad2-a2c8b8cb9e41_bg3.jpg?width=&height=auto");
     background-size: auto 50%;
     background-repeat: no-repeat;
-    background-position: left top;        
+    background-position: left top;
+    flex-direction: column;
+    padding: 1em;
   }
 
   .container {
