@@ -1,100 +1,81 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Wedding Details</title>
-  <style>
-    /* Add your custom CSS styles here */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #5F8575;
-      color: #ffffff;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    h1 {
-      color: #F0FFFF;
-      text-align: center;
-    }
-    .wedding-details {
-      margin-top: 30px;
-      text-align: center;
-      text-align: center;
-    }
-    .wedding-date {
-      font-size: 24px;
-      color: #F0FFFF;
-    }
-    .venue {
-      margin-top: 20px;
-      font-size: 18px;
-    }
-    .countdown {
-      text-align: center;
-      font-size: 24px;
-      margin-top: 30px;
-      color: #F0FFFF;
-    }
-    .navigation {
-      text-align: center;
-      font-size: 30px;
-      color: #000000;
-    }
-    .schedule {
-      text-align: center;
-      color: #F0FFFF;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to the Wedding</h1>
-    <div class="wedding-details">
-      <p class="wedding-date">Date</p>
-      <p class="venue">Location</p>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Skipp Wedding 24</title>
+     <link href="./stylesheet.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="header">    
+    <h1 class="namesheader">
+        Indigo
+        <span>&</span>
+        Ryan
+    </h1>
+    <h2 class="namesheader">Invite you to join them</h2>
+    <h3 class="namesheader">6<sup>th</sup> September 2024</h3>
+   
+    <h4 class="namesheader"> <span id="countdown"></span></h4>
+    
+    <a class="rsvp" href="https://docs.google.com/forms/d/e/1FAIpQLSdLoheL1x9Fdw8Y8hedhRy4NyHnjsUZMh8qQTrmzgKPsmY4WA/viewform?usp=sf_link" target="_blank">RSVP</a>
     </div>
-    <div class="countdown">
-      <p>Wedding Countdown | <span id="countdown"></span></p>
-    </div>
+
+  <div class="engagementphoto">
+    <img src="https://i.imgur.com/ryHwXWF.jpg">
+    
   </div>
 
+  <div class="timeline">
+    <h3>Schedule Of The Evening</h3>
+    <p>Wedding Reception begins</p>
+    <h4>19:30</h4>
+    <p>First Dance and Cake Cutting</p>
+    <h4>00:00</h4>
+    <p>Doors close and real life as the Skipp's begins</p>
+  </div>
+
+  <div class="hotels">
+    <h3>Hotels</h3>
+    <p>For those requiring overnight accomodation below are some of the closest hotels to the venue</p>
+    <ul><a href="https://www.suryahotels.co.uk/dragonflyburystedmunds/" target="_blank">Dragonfly Hotel</a></ul>
+    <ul><a href="https://www.premierinn.com/gb/en/hotels/england/suffolk/bury-st-edmunds/bury-st-edmunds-town-centre.html?INNID=BURSTE&ARRdd=05&ARRmm=11&ARRyyyy=2023&NIGHTS=1&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHFPP_GB_GoogleSearch_desktop_default+BURSTE&gclid=CjwKCAjws9ipBhB1EiwAccEi1O4ombDHkLr-1waSFz6gk1IGe-sX8i3mWo5gJRloeI6YXnYzvQP4SxoCBFIQAvD_BwE" target="_blank">Premier Inn - Bury Town Centre</a></ul>
+    <ul><a href="https://www.premierinn.com/gb/en/hotels/england/suffolk/bury-st-edmunds/bury-st-edmunds-north-a14.html?cid=GLBC_44539345" target="_blank">Premier Inn - A14</a> </ul>    
+  </div>
+
+  <div class="gift">
+    <h3>Wedding Gifts</h3>
+    <p>Your presence at our wedding is the greatest gift of all. However should you wish to honour us with a gift, contributions to our honeymoon would be greatly accepted</p>
+  </div>
+
+  <div>
+    <h3>Wedding Details</h3>
+    <p>Please note this wedding will be an adult only celebration, a night to let your hair down and party</p>
+  </div>
+        
+
+  <!-- Countdown Timer JavaScript -->
   <script>
-    // Countdown Timer JavaScript code
-    // Set the wedding date and time
     var weddingDate = new Date('September 06, 2024 14:00:00').getTime();
 
-    // Update the countdown every 1 second
     var countdown = setInterval(function() {
-      // Get the current date and time
       var now = new Date().getTime();
-
-      // Find the time remaining between now and the wedding date
       var timeRemaining = weddingDate - now;
-
-      // Calculate days, hours, minutes, and seconds
       var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
       var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-      // Display the countdown in the HTML element with id "countdown"
       document.getElementById('countdown').innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
 
-      // If the countdown is over, display a message
       if (timeRemaining < 0) {
         clearInterval(countdown);
         document.getElementById('countdown').innerHTML = 'The wedding has already started!';
       }
     }, 1000);
   </script>
-   <div class="navigation">
-      <a href="evening-rsvp.html">RSVP</a>
-    </div>
-  <div class="schedule">
-      <h2>Wedding Schedule</h2>
-      </div>
+
+
 </body>
 </html>
