@@ -1,3 +1,13 @@
+font=face {
+    font-family: 'Munchie';
+    src: url('fonts/Munchie.eot');
+    src: url('fonts/Munchie.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Munchie.woff2') format('woff2'),
+         url('fonts/Munchie.woff') format('woff'),
+         url('fonts/Munchie.ttf')  format('truetype'),
+         url('fonts/Munchie.svg#Munchie') format('svg');
+}
+
 h1,h2,h3,h4 {
   font-family: 'Munchie', sans-serif;
   color: rgb(95, 133, 117);
