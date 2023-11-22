@@ -13,7 +13,6 @@ body {
     color: black;
     margin: 0px;
     line-height: 1.5;
-    height: 100vh;
     min-height: 100vh;
     padding: 0px;
     text-align: center;
@@ -21,10 +20,19 @@ body {
     background-image: url("https://sayido.b-cdn.net/2gNtB3djFTh4JJ5aoFOS41khvKQ2/images/f2f3e201-8fd8-5fa7-dad2-a2c8b8cb9e41_bg3.jpg?width=&height=auto");
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: left top;  
+    background-position: left top;        
+  }
+
+  .container {
+    display: flex;
     flex-direction: column;
-    padding: 1em;  
-    
+    align-items: center;
+  }
+  
+  .namesheader {
+    font-family: 'Munchie', sans-serif;
+    color: rgb(95, 133, 117);
+    text-decoration: underline;
   }
   
   .rsvp{
@@ -43,9 +51,9 @@ body {
     background-color: rgb(95, 133, 117);
   }
 
-.engagementphoto{
-    max-width: 50%;
-    max-height: 50%
+  .engagementphoto img {
+    max-width: 100%;
+    height: auto;
   }
   
 
