@@ -132,8 +132,7 @@
         <thead>
             <tr>
                 <th>Event</th>
-                <th>Action</th>
-            </tr>
+             </tr>
         </thead>
         <tbody>
             <!-- Event items will be added here dynamically -->
@@ -216,21 +215,121 @@
         document.getElementById('gameScore').innerText = gameScore;
 
         const mailList = [
-            { text: "You've received a letter!", value: 50 },
-            { text: "You've got a birthday card!", value: 100 },
-            { text: "You've won a contest!", value: 200 }
+            { text: "BILL - Dr R U Well - £300", value: 300 },
+            { text: "ADVERT - LuckRus specialising in the fortunate", value: 0 },
+            { text: "BILL - Dr Lim Ping - £450", value: 450 },
+            { text: "INSURANCE - Reduce that monthly outgoing by £300", value: -300 },
+            { text: "BILL - Buying lunch when you brought food you naughty pickle - £50", value: 50 },
+            { text: "JUNK - Just bin it", value: 0 },
+            { text: "BILL - Hairdressers, get that mop trimmed - £50", value: 50 },
+            { text: "BILL - Finally replacing those holy shoes jesus rejoices - £100", value: 100 },
+            { text: "ADVERT - Dog Walkers Needed bring your own leash", value: 0 },
+            { text: "JUNK - Just bin it", value: 0 },
+            { text: "INSURANCE - Reduce that monthly outgoing by £300", value: -300 },
+            { text: "GAMBLE - Casino is it, stake up to £300 and roll a 5 or 6 to collect 10 times your stake manually adjust your winnings or loss", value: 0 },
+            { text: "WINNER - You savvy investor £100 payday bonus", value: -100 },
+            { text: "BILL - Dr Phil Ling - £100", value: 100 },
+            { text: "BILL - Dr. Seth O'Scope - £300", value: 300 },
+            { text: "BILL - Dr. N E Payne - £250", value: 250 },
+            { text: "BILL - Saving money on a new car doesn't seem so smart now - £300", value: 300 },
+            { text: "BILL - Family Holiday, Welcome to a week of stress - £400", value: 400 },
+            { text: "BILL - Electricity Bill - £50", value: 50 },
+            { text: "INSURANCE - Reduce that monthly outgoing by £300", value: -300 },
+            { text: "JUNK - Just bin it", value: 0 },
+            { text: "BILL - Telephone Bill - £150", value: 150 },
+            { text: "BONUS - It's Bonus Month, you earnt it get £450 on payday", value: -450 },
+            { text: "BILL - Business support, you need it! - £50", value: 50 },
+            { text: "INSURANCE - Reduce that monthly outgoing by £300", value: -300 },
+            { text: "BILL - Car Repairs - £100", value: 100 },
+            { text: "BILL - Did you really need another new outfit - £100", value: 100 },
+            { text: "GAMBLE - Your friend gives you insider knowledge Roll the dice and manually update your profit (Dice roll x100)", value: 0 },
+            { text: "BILL - 4 tyres Jeremy - £300", value: 300 },
+            { text: "BILL - After School Peace and Quiet Club - £300", value: 300 },
+            { text: "BILL - You can't park there mate - £150", value: 150 },
+            { text: "ADVERT - Drinks Break? ", value: 0 },
+            { text: "INSURANCE - Reduce that monthly outgoing by £300", value: -300 },
+            { text: "BILL - Wedding cakes are pricey, right? - £250", value: 250 },
+            { text: "BILL - Holiday in Skeggy - £100", value: 100 },
+            { text: "JUNK - Just bin it", value: 0 },
+            { text: "BILL - Dr. I Hertz - £50", value: 50 },
+            { text: "BILL - Time for those NOS canisters - £150", value: 150 },
+            { text: "ADVERT - Cat day care, just insert a cat flap and **** off", value: 0 },
+            { text: "BILL - Solo Holiday for One - £250", value: 250 },
+            { text: "BILL - Takeaway Friday - Inflation hey - £100", value: 100 },
+            { text: "BILL - Camping Holiday - They really charge you for this? - £150", value: 150 },
+            { text: "INSURANCE - Reduce that monthly outgoing by £300", value: -300 },
+            { text: "BILL - Premium air for your tyres - £250", value: 250 },
+            { text: "WINNER - Strike lucky on a scratchcard, shame the shop is shut until payday - £50", value: -50 },
+            { text: "BILL - Dance lessons - £150", value: 150 },
+            { text: "BILL - Tartan Paint for the new room - £450", value: 450 },
+            { text: "BILL - Dr. Ian Jection - £50", value: 50 },
+            { text: "JUNK - Just bin it", value: 0 },
+            { text: "GAMBLE - You just can't help it - Roll the dice twice, first roll is your stake (x100) and second roll is your return (x100) manually update your profit(or loss)", value: 0 },
+ 
         ];
 
         const eventList = [
-            { text: "Business Meeting", action: "Earn £1000", value: 1000 },
-            { text: "Lucky Day", action: "Find £500 on the street", value: 500 },
-            { text: "Traffic Jam", action: "Lose 1 hour, no impact on money", value: 0 }
+            { text: "Klarna payments are adding up, take out a loan for £1500", value: 0 },
+            { text: "Pick any player to pay £500 to the Jackpot", value: 0 },
+            { text: "Market Hit - Give to a player when selling an auction card to reduce the value by £700", value: 0 },
+            { text: "Take £900 from any player", value: 0 },
+            { text: "You and a player of your choice collect £1500", value: 0 },
+            { text: "Pick any player to pay £500 to the Jackpot", value: 0 },
+            { text: "Pick any player to pay £700 to the Jackpot", value: 0 },
+            { text: "Take £500 from any player", value: 0 },
+            { text: "Pick any player to pay £1500 to the Jackpot", value: 0 },
+            { text: "Take £800 from any player", value: 0 },
+            { text: "Market Hit - Give to a player when selling an auction card to reduce the value by £600", value: 0 },
+            { text: "Klarna payments are adding up, take out a loan for £1500", value: 0 },           
+            { text: "Take £500 from any player", value: 0 },
+            { text: "Pick any player to pay £700 to the Jackpot", value: 0 },
+            { text: "Take £400 from any player", value: 0 },
+            { text: "Pick any player to pay £500 to the Jackpot", value: 0 },
+            { text: "Not today - Cancel and event card played on you", value: 0 },
+            { text: "Take £700 from any player", value: 0 },
+            { text: "Market Hit - Give to a player when selling an auction card to reduce the value by £400", value: 0 },
+            { text: "Klarna payments are adding up, take out a loan for £1500", value: 0 },          
+            { text: "Take £600 from any player", value: 0 },
+            { text: "Pick any player to pay £500 to the Jackpot", value: 0 },
+            { text: "You and a player of your choice collect £1500", value: 0 },          
+            { text: "Market Hit - Give to a player when selling an auction card to reduce the value by £500", value: 0 },
+            { text: "Pick any player to pay £400 to the Jackpot", value: 0 },
+            { text: "Take £1000 from any player", value: 0 },
+            { text: "Not today - Cancel and event card played on you", value: 0 },
+            { text: "Take £800 from any player", value: 0 },
+            { text: "Market Hit - Give to a player when selling an auction card to reduce the value by £400", value: 0 },
+            { text: "Take £900 from any player", value: 0 },      
+                  
         ];
 
         const auctionList = [
-            { text: "Rare Painting", buyValue: 800, sellValue: 1500 },
-            { text: "Antique Coin Collection", buyValue: 1200, sellValue: 2000 },
-            { text: "Vintage Watch", buyValue: 500, sellValue: 1000 }
+            { text: "1 Racehorse", buyValue: 2100, sellValue: 4200 },
+            { text: "Comic Book Collection", buyValue: 600, sellValue: 1650 },
+            { text: "Vintage Art", buyValue: 2100, sellValue: 4200 },
+            { text: "1 Motorbike", buyValue: 2400, sellValue: 3600 },
+            { text: "1 Caravan", buyValue: 3300, sellValue: 4800 },
+            { text: "1 Pedigree Pooch", buyValue: 600, sellValue: 1650 },
+            { text: "1 Garden Gnome", buyValue: 450, sellValue: 1200 },
+            { text: "Castillo en España", buyValue: 4500, sellValue: 7500 },
+            { text: "1 Old Banger", buyValue: 1050, sellValue: 1800 },
+            { text: "1 Vineyard", buyValue: 3000, sellValue: 4500 },
+            { text: "1 Tractor", buyValue: 2850, sellValue: 3600 },
+            { text: "Bury Town Football Club", buyValue: 2400, sellValue: 3600 },
+            { text: "1 Swimming Pool", buyValue: 3000, sellValue: 7500 },
+            { text: "1 Kebab Van", buyValue: 1050, sellValue: 1800 },
+            { text: "1 Antique Chest", buyValue: 450, sellValue: 1200 },
+            { text: "1 Trip to the Moon", buyValue: 1050, sellValue: 1800 },
+            { text: "1 Ancient Artifact", buyValue: 3000, sellValue: 7500 },
+            { text: "1 Coin Collection", buyValue: 1050, sellValue: 1800 },
+            { text: "1 Diamond Dog Collar", buyValue: 1000, sellValue: 1800 },
+            { text: "1 Beauty Salon", buyValue: 3300, sellValue: 4800 },
+            { text: "1 Stamp Collection", buyValue: 1050, sellValue: 1800 },
+            { text: "1 Racing Car", buyValue: 2850, sellValue: 3600 },
+            { text: "1 Magic Wand", buyValue: 2400, sellValue: 3600 },
+            { text: "1 Photo of Drax and Eddie", buyValue: 1000, sellValue: 2500 },
+                       
+            
+
         ];
 
         function showMailPopup() {
@@ -249,36 +348,32 @@
             const selectedEvent = eventList[randomIndex];
 
             document.getElementById('eventText').innerText = selectedEvent.text;
-            document.getElementById('eventAction').innerText = selectedEvent.action;
 
             document.getElementById('eventPopup').style.display = 'block';
         }
 
         function addToEventTable() {
-    const eventText = document.getElementById('eventText').innerText;
-    const eventAction = document.getElementById('eventAction').innerText;
+            const eventText = document.getElementById('eventText').innerText;
 
-    const eventTableBody = document.querySelector('#eventTable tbody');
-    const newRow = eventTableBody.insertRow();
-    const textCell = newRow.insertCell(0);
-    const actionCell = newRow.insertCell(1);
-    const removeCell = newRow.insertCell(2); // New cell for the remove button
+            const eventTableBody = document.querySelector('#eventTable tbody');
+            const newRow = eventTableBody.insertRow();
+            const textCell = newRow.insertCell(0);
+            const removeCell = newRow.insertCell(1); // New cell for the remove button
 
-    textCell.textContent = eventText;
-    actionCell.textContent = eventAction;
+            textCell.textContent = eventText;
 
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Card Played';
-    removeButton.onclick = function () {
-        newRow.remove(); // Remove the row when the button is clicked
-    };
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Card Played';
+            removeButton.onclick = function () {
+                newRow.remove(); // Remove the row when the button is clicked
+            };
 
-    removeCell.appendChild(removeButton);
+            removeCell.appendChild(removeButton);
 
-    closeEventPopup(); // Move this line here
+            closeEventPopup(); // Move this line here
+        }
 
-    // Ensure that the popup is closed after the table is updated
-}
+    
 
 function closeEventPopup() {
             document.getElementById('eventPopup').style.display = 'none';
@@ -471,10 +566,12 @@ function closeEventPopup() {
     const mailRows = mailTableBody.querySelectorAll('tr');
     let mailAmount = 0;
     mailRows.forEach(row => {
-        const mailValue = parseInt(row.cells[1].textContent);
-        gameScore += mailValue;
-        mailAmount += mailValue; // Accumulate mail amount
-    });
+    const mailValue = parseInt(row.cells[1].textContent);
+    gameScore -= mailValue; // Subtract the actual mail value from the game score
+    mailAmount += mailValue; // Accumulate mail amount
+});
+
+
 
     // 3. Remove all the mail cards from the table
     mailTableBody.innerHTML = '';
@@ -501,7 +598,8 @@ function closeEventPopup() {
     const total = 850 - mailAmount - loanFee;
 
     // 9. Log payday details to the table
-    logPaydayDetails(mailAmount, loanFee, total);
+logPaydayDetails(mailAmount, loanFee, total);
+
 }
 
 function logPaydayDetails(mailAmount, loanFee, total) {
@@ -516,13 +614,16 @@ function logPaydayDetails(mailAmount, loanFee, total) {
     const totalCell = newRow.insertCell(4);
 
     monthCell.textContent = month;
-    paydayCell.textContent = 850
-    mailAmountCell.textContent = mailAmount;
+    paydayCell.textContent = 850;
+
+    // Check if mailAmount is negative, then add it to the total
+    mailAmountCell.textContent = mailAmount >= 0 ? mailAmount : `-${Math.abs(mailAmount)}`;
+
+
     loanFeeCell.textContent = loanFee;
     totalCell.textContent = total;
-
-    console.log('Payday details added to the table:', month, mailAmount, loanFee, total);
 }
+
 
 
 
